@@ -1,0 +1,66 @@
+grammar Tabloid;
+
+// This coursework dialect uses conventional precedence and explicit Python semantics.
+program: statement* PROGRAM_END EOF;
+statement: assignment | printStmt | functionDecl | ifStmt | whileStmt | returnStmt | expressionStmt;
+assignment: EXPERTS_CLAIM ID TO_BE expression;
+printStmt: PRINT expression;
+functionDecl: DISCOVER HOW TO ID WITH paramList? block;
+paramList: ID (COMMA ID)*;
+ifStmt: WHAT_IF expression suite (LIES suite)?;
+suite: block | statement;
+whileStmt: WHILE expression block;
+returnStmt: RETURN expression?;
+block: RUMOR_HAS_IT statement* END_OF_STORY;
+expressionStmt: expression;
+
+// Separate levels make associativity explicit; comparisons do not chain implicitly.
+expression: orExpr;
+orExpr: andExpr (OR andExpr)*;
+andExpr: comparison (AND comparison)*;
+comparison: additive ((EQUAL | GREATER | LESS) additive)?;
+additive: multiplicative ((PLUS | MINUS) multiplicative)*;
+multiplicative: unary ((TIMES | DIVIDED_BY | MODULO) unary)*;
+unary: MINUS unary | primary;
+primary: functionCall | inputExpr | literal | ID | LPAREN expression RPAREN;
+functionCall: ID OF (LPAREN RPAREN | expression (COMMA expression)*);
+inputExpr: INPUT expression;
+literal: NUMBER | STRING | TRUE_LITERAL | FALSE_LITERAL;
+
+DISCOVER: 'DISCOVER';
+HOW: 'HOW';
+TO: 'TO';
+WITH: 'WITH';
+OF: 'OF';
+RUMOR_HAS_IT: 'RUMOR' GAP 'HAS' GAP 'IT';
+END_OF_STORY: 'END' GAP 'OF' GAP 'STORY';
+WHAT_IF: 'WHAT' GAP 'IF';
+LIES: 'LIES!';
+WHILE: 'STAY' GAP 'TUNED' GAP 'WHILE';
+EXPERTS_CLAIM: 'EXPERTS' GAP 'CLAIM';
+TO_BE: 'TO' GAP 'BE';
+PRINT: 'YOU' GAP 'WON\'T' GAP 'WANT' GAP 'TO' GAP 'MISS';
+INPUT: 'LATEST' GAP 'NEWS' GAP 'ON';
+TRUE_LITERAL: 'TOTALLY' GAP 'RIGHT';
+FALSE_LITERAL: 'COMPLETELY' GAP 'WRONG';
+RETURN: 'SHOCKING' GAP 'DEVELOPMENT';
+PROGRAM_END: 'PLEASE' GAP 'LIKE' GAP 'AND' GAP 'SUBSCRIBE';
+AND: 'AND';
+OR: 'OR';
+PLUS: 'PLUS';
+MINUS: 'MINUS';
+TIMES: 'TIMES';
+DIVIDED_BY: 'DIVIDED' GAP 'BY';
+MODULO: 'MODULO';
+EQUAL: 'IS' GAP 'ACTUALLY';
+GREATER: 'BEATS';
+LESS: ('IS' GAP)? 'SMALLER' GAP 'THAN';
+LINE_COMMENT: 'UNCONFIRMED' GAP 'RUMOR:' ~[\r\n]* -> skip;
+NUMBER: [0-9]+ ('.' [0-9]+)?;
+STRING: '\'' ('\\' ['\\nrt] | ~['\\\r\n])* '\'';
+ID: [a-z_][a-zA-Z_0-9]*;
+LPAREN: '(';
+RPAREN: ')';
+COMMA: ',';
+fragment GAP: [ \t\r\n]+;
+WS: [ \t\r\n]+ -> skip;
