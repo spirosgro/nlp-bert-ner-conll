@@ -4,7 +4,7 @@ A Java and ANTLR source-to-source compiler for a documented **coursework dialect
 of Tabloid**, the clickbait-inspired programming language. It translates `.tbd`
 programs into readable Python 3 and rejects invalid input before writing output.
 
-![Compiler checks](https://github.com/spirosgro/tabloid-to-python-compiler/actions/workflows/test.yml/badge.svg)
+
 ![Java](https://img.shields.io/badge/Java-17%2B-007396)
 ![ANTLR](https://img.shields.io/badge/ANTLR-4.13.1-cc3333)
 ![License](https://img.shields.io/badge/license-MIT-green)
@@ -144,11 +144,6 @@ This compiler has no static type checker, definite-assignment analysis,
 optimization passes, Python traceback source maps or full upstream conformance
 suite. Undefined names, arity errors and invalid runtime operand types are left
 to Python. Translated programs are not sandboxed. See [SECURITY.md](SECURITY.md).
-
-Public preparation: Spiros Grouztidis. The grammar and visitor architecture come
-from supplied coursework; the public refactor, tests and English documentation
-were prepared with AI assistance. This does not imply that new public features
-were part of the original submission.
 
 Project code is under [MIT](LICENSE). ANTLR retains its own license; the original
 Tabloid language is credited separately in [third-party notices](THIRD_PARTY_NOTICES.md).
