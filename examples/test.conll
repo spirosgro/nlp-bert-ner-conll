@@ -1,0 +1,11 @@
+Alice NNP B-NP B-PER
+Morgan NNP I-NP I-PER
+visits VBZ B-VP O
+Berlin NNP B-NP B-LOC
+. . O O
+
+Paris NNP B-NP B-LOC
+hosts VBZ B-VP O
+Northstar NNP B-NP B-ORG
+Labs NNP I-NP I-ORG
+. . O O

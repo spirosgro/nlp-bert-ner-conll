@@ -1,0 +1,19 @@
+-DOCSTART- -X- -X- O
+
+Alice NNP B-NP B-PER
+Morgan NNP I-NP I-PER
+visits VBZ B-VP O
+Paris NNP B-NP B-LOC
+. . O O
+
+Northstar NNP B-NP B-ORG
+Labs NNP I-NP I-ORG
+hires VBZ B-VP O
+French JJ B-NP B-MISC
+engineers NNS I-NP O
+. . O O
+
+Berlin NNP B-NP B-LOC
+hosts VBZ B-VP O
+Alice NNP B-NP B-PER
+. . O O

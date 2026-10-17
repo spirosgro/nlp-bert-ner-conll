@@ -1,0 +1,11 @@
+Alice NNP B-NP B-PER
+visits VBZ B-VP O
+Berlin NNP B-NP B-LOC
+. . O O
+
+Northstar NNP B-NP B-ORG
+Labs NNP I-NP I-ORG
+hosts VBZ B-VP O
+French JJ B-NP B-MISC
+engineers NNS I-NP O
+. . O O

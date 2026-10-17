@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="380" viewBox="0 0 1200 380" role="img" aria-labelledby="title desc">
+<title id="title">CoNLL word labels through BERT to entity evaluation</title>
+<desc id="desc">Local CoNLL sentences enter a fast tokenizer. Only first subwords receive supervision. A transformer and classifier produce word labels, evaluated with strict span F1. Training selects checkpoints using validation only.</desc>
+<rect width="1200" height="380" rx="16" fill="#0d1c30"/>
+<g font-family="Arial, sans-serif">
+<text x="40" y="48" font-size="15" fill="#68d9c2">NLP EXPERIMENT PIPELINE</text>
+<text x="40" y="92" font-size="29" font-weight="bold" fill="#ffffff">Word labels, subword models, entity-level evaluation</text>
+<g fill="#193149" stroke="#46627a"><rect x="40" y="142" width="200" height="120" rx="10"/><rect x="270" y="142" width="200" height="120" rx="10"/><rect x="500" y="142" width="200" height="120" rx="10"/><rect x="730" y="142" width="200" height="120" rx="10"/><rect x="960" y="142" width="200" height="120" rx="10"/></g>
+<g stroke="#68d9c2" stroke-width="2" fill="none"><path d="M240 202H263l-6-5m6 5-6 5"/><path d="M470 202H493l-6-5m6 5-6 5"/><path d="M700 202H723l-6-5m6 5-6 5"/><path d="M930 202H953l-6-5m6 5-6 5"/></g>
+<g font-size="20" font-weight="bold" fill="#ffffff" text-anchor="middle"><text x="140" y="181">CoNLL input</text><text x="370" y="181">Tokenisation</text><text x="600" y="181">BERT / RoBERTa</text><text x="830" y="181">Word labels</text><text x="1060" y="181">Entity scores</text></g>
+<g font-size="16" fill="#c4d4e4" text-anchor="middle"><text x="140" y="218">Explicit gold scheme</text><text x="140" y="242">Sentence boundaries</text><text x="370" y="218">First-subword labels</text><text x="370" y="242">No silent truncation</text><text x="600" y="218">Fine-tune or freeze</text><text x="600" y="242">Dynamic padding</text><text x="830" y="218">One label per word</text><text x="830" y="242">Error exports</text><text x="1060" y="218">Strict IOB2 span F1</text><text x="1060" y="242">Token diagnostics</text></g>
+<text x="40" y="315" font-size="18" fill="#68d9c2">Best checkpoint selected on validation</text><text x="650" y="315" font-size="18" fill="#c4d4e4">Held-out test evaluated in a separate command</text>
+<text x="40" y="351" font-size="14" fill="#9eafc0">Historical report scores and new software verification are documented separately.</text>
+</g></svg>

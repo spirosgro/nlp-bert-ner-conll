@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+message: "Please cite this software if you reuse it, and cite the upstream papers and dataset separately."
+title: "Named Entity Recognition with BERT on CoNLL-2003"
+type: software
+authors:
+  - family-names: "Grouztidis"
+    given-names: "Spiros"
+version: 1.0.0
+date-released: 2026-10-16
+license: MIT

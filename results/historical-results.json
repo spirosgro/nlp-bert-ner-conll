@@ -1,0 +1,13 @@
+{
+  "evidence_status": "reported_in_original_coursework_not_independently_rerun",
+  "scale": "fraction_0_to_1",
+  "source_locator": "Original report body questions Q1, Q3, Q5, Q6, Q7 and Q8",
+  "experiments": [
+    {"id": "q1", "model": "bert-base-uncased", "task": "ner", "token_accuracy": 0.972, "balanced_accuracy": 0.823, "entity_f1": null},
+    {"id": "q3", "model": "bert-base-cased", "task": "ner", "token_accuracy": 0.974, "balanced_accuracy": 0.842, "entity_f1": null},
+    {"id": "q5", "model": "bert-base-uncased-frozen", "task": "ner", "token_accuracy": null, "balanced_accuracy": null, "entity_f1": null},
+    {"id": "q6", "model": "bert-base-uncased", "task": "pos", "token_accuracy": 0.988, "balanced_accuracy": 0.956, "entity_f1": null},
+    {"id": "q7", "model": "bert-base-uncased", "task": "chunk", "token_accuracy": null, "balanced_accuracy": null, "entity_f1": null},
+    {"id": "q8", "model": "roberta-base", "task": "ner", "token_accuracy": null, "balanced_accuracy": null, "entity_f1": null}
+  ]
+}
